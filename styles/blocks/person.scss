@@ -2,18 +2,15 @@
   position: relative;
   width: 220px;
   height: 231px;
-  gap: 8px;
 
   &__card {
+    display: flex;
+    flex-direction: column;
     padding: 10px 10px 16px;
     border-radius: 10px;
     width: 220px;
-    transition: background-color 1s;
-
-    .person__extra {
-      opacity: 0;
-      transition: opacity 1s;
-    }
+    gap: 8px;
+    transition: all 1s ease;
 
     &:hover {
       position: absolute;
@@ -21,11 +18,21 @@
       top: 0;
       left: 0;
       background-color: #eee;
+      transform: scale(1.1);
       z-index: 10;
+
+      .person__image {
+        border-radius: 60px;
+      }
 
       .person__extra {
         opacity: 1;
       }
+    }
+
+    .person__extra {
+      opacity: 0;
+      transition: opacity 1s;
     }
   }
 
@@ -37,6 +44,9 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    transition: all 1s ease;
+    display: block;
+    object-fit: cover;
   }
 
   &__rank {
@@ -70,11 +80,8 @@
 
   &__extra {
     opacity: 0;
+    transition: opacity 1s ease;
     font-size: 18px;
-
-    &:hover {
-      opacity: 1;
-    }
   }
 
   &__sport {
