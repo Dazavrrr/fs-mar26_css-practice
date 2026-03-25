@@ -1,0 +1,18 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.people {
+  flex-flow: column wrap;
+  display: flex;
+}
+
+.people__person {
+  display: flex;
+}
+
+.people__person--photo {
+  width: 200px;
+  height: 200px;
+}
+/*# sourceMappingURL=fs-mar26_css-practice.b1276d39.css.map */
