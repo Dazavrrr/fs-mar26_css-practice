@@ -1,0 +1,97 @@
+.person {
+  position: relative;
+  width: 220px;
+  height: 231px;
+  gap: 8px;
+
+  &__card {
+    padding: 10px 10px 16px;
+    border-radius: 10px;
+    width: 220px;
+    transition: background-color 1s;
+
+    .person__extra {
+      opacity: 0;
+      transition: opacity 1s;
+    }
+
+    &:hover {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: #eee;
+      z-index: 10;
+
+      .person__extra {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__photo {
+    position: relative;
+  }
+
+  &__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  &__rank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    top: 84px;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    color: #8b0000;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50%;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2f4f4f;
+  }
+
+  &__extra {
+    opacity: 0;
+    font-size: 18px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__sport {
+    &::after {
+      content: ",";
+      display: inline;
+    }
+  }
+
+  &__pay {
+    &::before {
+      content: "$";
+      display: inline;
+    }
+    &::after {
+      content: "M";
+      display: inline;
+    }
+  }
+}
